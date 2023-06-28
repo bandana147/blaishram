@@ -9,6 +9,7 @@ export default async function init(el) {
   const { createTag, loadScript } = await import(`${getLibs()}/utils/utils.js`);
   const helloEl = createTag('h2', { class: 'hello-title' }, `${hello},`);
   const nameEl = createTag('p', { class: 'hello-name' }, name.trim());
+  debugger
   el.append(helloEl, nameEl);
   if (textArr[0] || textArr[1]) {
     await loadScript('/deps/gsap.min.js');
